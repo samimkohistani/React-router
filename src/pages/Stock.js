@@ -1,9 +1,7 @@
 import React from "react";
 
-const Stock = (props) => {
-  const stock = props.stockData.stocks.filter((stock) => {
-    return (stock.symbol === props.match.params.symbol)
-  })[0]
+function Stock (props) {
+    const stock = props.allStocks.filter( d => d.symbol === props.match.params.symbol)[0]
   return (
     <div>
       <h3>Name: {stock.name}</h3>
